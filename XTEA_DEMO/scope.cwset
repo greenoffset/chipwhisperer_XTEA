@@ -1,0 +1,80 @@
+[Scope Settings]
+[[ChipWhisperer/OpenADC]]
+Connection = NewAE USB (CWLite/CW1200)
+Auto-Refresh DCM Status = True
+[[[NewAE USB (CWLite/CW1200)]]]
+[[[[ChipWisperer-Lite USB]]]]
+[[ChipWhisperer/OpenADC]]
+[[[Serial Port (LX9)]]]
+Selected Port = 
+[[ChipWhisperer/OpenADC]]
+[[[OpenADC]]]
+[[[[HW Information]]]]
+[[[OpenADC]]]
+[[[[Gain Setting]]]]
+Mode = low
+Setting = 45
+[[[OpenADC]]]
+[[[[Trigger Setup]]]]
+Mode = rising edge
+Timeout (secs) = 2
+Offset = 0
+Pre-Trigger Samples = 0
+Total Samples = 2000
+Downsample Factor = 1
+[[[OpenADC]]]
+[[[[Clock Setup]]]]
+[[[[[ADC Clock]]]]]
+Source = CLKGEN x4 via DCM
+Phase Adjust = 0
+[[[[Clock Setup]]]]
+Freq Counter Src = EXTCLK Input
+[[[[[CLKGEN Settings]]]]]
+Input Source = system
+Input Frequency = 10000000.0
+Multiply = 2
+Divide = 12
+Desired Frequency = 16000000
+[[ChipWhisperer/OpenADC]]
+[[[CW Extra]]]
+[[[[CW Extra Settings]]]]
+[[[[[Trigger Pins]]]]]
+Target IO1 (Serial TXD) = False
+Target IO2 (Serial RXD) = False
+Target IO3 (SmartCard Serial) = False
+Target IO4 (Trigger Line) = True
+Collection Mode = OR
+[[[[CW Extra Settings]]]]
+Trigger Module = Basic (Edge/Level)
+Clock Source = Target IO-IN
+Target HS IO-Out = CLKGEN
+HS-Glitch Out Enable (High Power) = 0
+HS-Glitch Out Enable (Low Power) = 0
+[[[[[Target IOn Pins]]]]]
+Target IO1 = Serial TXD
+Target IO2 = Serial RXD
+Target IO3 = High-Z
+Target IO4 = High-Z
+[[[[CW Extra Settings]]]]
+[[[[[Target IOn GPIO Mode]]]]]
+Target IO1: GPIO = Disabled
+Target IO2: GPIO = Disabled
+Target IO3: GPIO = Disabled
+Target IO4: GPIO = Disabled
+nRST: GPIO = Default
+PDID: GPIO = Default
+PDIC: GPIO = Default
+[[[[CW Extra Settings]]]]
+Target Power State = True
+[[[CW Extra]]]
+[[[[Glitch Module]]]]
+Clock Source = Target IO-IN
+Glitch Width (as % of period) = 10
+Glitch Width (fine adjust) = 0
+Glitch Offset (as % of period) = 10
+Glitch Offset (fine adjust) = 0
+Glitch Trigger = Manual
+Single-Shot Arm = After Scope Arm
+Ext Trigger Offset = 0
+Repeat = 1
+Output Mode = Clock XORd

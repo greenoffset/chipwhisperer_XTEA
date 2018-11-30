@@ -1,0 +1,59 @@
+[Target Settings]
+[[ChipWhisperer CW305 (Artix-7)]]
+[[[PLL Settings]]]
+[[[[CLK-SMA (X6)]]]]
+[[[PLL Settings]]]
+[[[[CLK-N13 (FGPA Pin N13)]]]]
+CLK-N13 Source = PLL1
+[[[PLL Settings]]]
+[[[[CLK-E12 (FGPA Pin E12)]]]]
+CLK-E12 Source = PLL2
+[[[PLL Settings]]]
+[[ChipWhisperer CW305 (Artix-7)]]
+Disable CLKUSB For Capture = True
+Time CLKUSB Disabled for = 50
+CLKUSB Manual Setting = True
+[[[FPGA Bitstream]]]
+Bitstream File = 
+[Target Settings]
+[[SEO_MOD]]
+Connection = NewAE USB (CWLite/CW1200)
+Key Length (Bytes) = 16
+Input Length (Bytes) = 8
+Output Length (Bytes) = 8
+Subvalue = 00000000
+Init Command = 
+Load Key Command = 
+Load Input Command = 
+Go Command = :$TEXT$000000DEADBEEA00000000\n
+Output Format = r$RESPONSE$\n
+[[[NewAE USB (CWLite/CW1200)]]]
+baud = 38400
+[Target Settings]
+[[SPI Flash Reprogrammer]]
+Connection = None
+Input Length (Bytes) = 16
+Write Address (Hex) = 0x1000
+Flash Chip = W25Q32
+[Target Settings]
+[[Simple Serial]]
+Connection = NewAE USB (CWLite/CW1200)
+Key Length (Bytes) = 16
+Input Length (Bytes) = 4
+Output Length (Bytes) = 8
+[[[Protocol Version]]]
+Version = auto
+Timeout (ms) = 20
+[[Simple Serial]]
+Preset Mode = Custom
+Init Command = 
+Load Key Command = k$KEY$\n
+Load Input Command = 
+Go Command = p$TEXT$00000000\n
+Output Format = r$RESPONSE$\n
+[[[NewAE USB (CWLite/CW1200)]]]
+baud = 19200
+[Target Settings]
+[[Smart Card]]
+Reader Hardware = None
+SmartCard Protocol = None
